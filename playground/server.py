@@ -1,19 +1,14 @@
-from flask import Flask, render_template 
-app = Flask(__name__)    
+from flask import Flask, render_template
+app = Flask(__name__)
 
-@app.route('/')        
+@app.route('/')
 def index():
-    return render_template("new.html", num=5)
+    return render_template("index.html")
 
-@app.route('/<int:num>')        
-def playground():
-    return render_template("new.html", int)
+@app.route('/<int:num>')
+def playground(num):
+    return render_template(num)
 
 @app.route('/<other>')
-def sorry(other):
+def sorry():
     return f"Sorry! No response. Try Again"
-
-
-
-if __name__=="__main__":   
-    app.run(debug=True)   
