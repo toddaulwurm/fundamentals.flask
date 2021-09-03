@@ -6,24 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playground</title>
     <style>
-        body {
-            display: flex;
+        #wrapper {
+            margin-left: 50vw;
         }
-        div{
+        .play{
+            margin: 10px;
+            border-radius: 10px;
             height: 50px;
             width: 50px;
-            background-color: grey;
+            background-color: rgb(187, 29, 29);
+
+        }
+        #ground {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 25vw;
+            width: 400px;
         }
     </style>
 </head>
 <body>
+    <div id="wrapper">
         <h3>Playground</h3>
-    <p>Blocks: {{ blocks }}</p>
-
-        
+        <p>Blocks: {{ blocks }}</p>
+    </div>
+    <div id="ground">
     {% for x in range(0,blocks): %}
-        <div></div>
+        <div class="play"></div>
     {% endfor %}
+    </div>
         
 </body>
 </html>
