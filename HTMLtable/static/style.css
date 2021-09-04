@@ -1,0 +1,14 @@
+body {
+    font-family: 'Glory', sans-serif;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+thead td {
+    background-color: rgb(216, 255, 75);
+}
+td {
+    background-color: blanchedalmond;
+}
