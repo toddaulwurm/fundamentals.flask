@@ -8,21 +8,22 @@
     <style>
         #click {
             background-color: blueviolet;
+            border: 2px solid black;
+            color: black;
         }
         #reset{
             background-color: brown;
+            border: 2px solid black;
+            color: black;
         }
     </style>
 </head>
 <body>
     <h1>Counter</h1>
-
-    <h2>Total Visits: {{visits}}</h2>
-
-    <form action="/calc" method="POST">
-        <input id="click" type="submit" value="Click">
-        <button id="reset">Reset</button>
-    </form>
-
+    <h3>Total Visits: {{session['sum']}}</h3>
+    <div>
+        <a href="/" id="click">Click</a>
+        <a href="/reset" id=reset>Reset</a>
+    </div>
 </body>
 </html>
