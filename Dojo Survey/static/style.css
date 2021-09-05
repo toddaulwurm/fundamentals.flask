@@ -1,0 +1,21 @@
+
+#wrapper{
+    margin-top: 20px;
+    width: 350px;
+    height: 500px;
+    background-color: pink;
+    border: 3px dotted black;
+    border-radius: 5px;
+    margin-left: 30vw;
+    padding: 20px;
+}
+h1{
+    color: saddlebrown;
+}
+#location, #language, #name {
+    margin: 15px;
+}
+
+#namebox {
+    width: 150px;
+}

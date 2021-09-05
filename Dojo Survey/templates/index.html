@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Dojo Survey</h1>
+        <hr>
+        <form action="/survey" method="POST">
+            <label for="name" id="name">Name:</label>
+            <input id="namebox" type="text" name="name">
+            <br>
+
+
+            <label for="location">Dojo Location:</label>
+            <select name="location" id="location">
+                <option value="chicago">Chicago</option>
+                <option value="tulsa">Tulsa</option>
+                <option value="burbank">Burbank</option>
+                <option value="seattle">Seattle</option>
+            </select>
+            <br>
+
+
+            <label for="language">Favorite Langauge:</label>
+            <select name="language" id="language">
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="c#">C#</option>
+                <option value="mern">MERN</option>
+            </select>
+        
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments" rows="4" cols="30" placeholder="Type here..."></textarea>
+            <br>
+
+            <input type="submit" value="Submit" id="sumbit">
+        </form>
+    </div>
+</body>
+</html>
