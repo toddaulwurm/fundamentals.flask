@@ -10,7 +10,7 @@ def y(y):
     return render_template("index.html", y=y, x=8)
 
 @app.route('/<int:y>/<int:x>')         
-def yandx(y, x):
+def yandx (y, x):
     return render_template("index.html", y=y, x=x)
 
 

@@ -1,7 +1,7 @@
 .color0{
     height: 50px;
     width: 50px;
-    background-color: blue;
+    background-color: peachpuff;
 }
 .color1{
     height: 50px;
@@ -10,4 +10,7 @@
 }
 #board {
     display: flex;
+}
+*{
+    background-color: grey;
 }

@@ -1,26 +1,24 @@
-from flask import Flask , render_template, redirect, request, session
+from flask import Flask , render_template, redirect, session
 app = Flask(__name__)
 app.secret_key= "wefg"    
 
 
-
-@app.route('/')        
+@app.route('/')
 def index():
-    visits=0
+    if "sum" not in session:
+        session["sum"] = 1
+    else:
+        session['sum'] += 1
     return render_template("index.html")
 
-@app.route('/calc', methods=['POST'])
-def calculate():
-    visits = request.form["visits"]
-    session["visits"] = visits
-    visits += 1
+@app.route('/reset')
+def reset():
+    session.clear()     #got this from the internet, but otherwise wouldn't have used a built in method.
     return redirect('/')
-
 
 @app.route('/<other>')
 def sorry(other):
-    return f"Sorry! No response. Try Again"
-
+    return f"Sorry! {other} not available! No response. Try Again"
 
 if __name__ == "__main__":
     app.run(debug=True)
